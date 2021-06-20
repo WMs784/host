@@ -5,7 +5,7 @@ let map = [ArrowNames.North,ArrowNames.South,ArrowNames.East,ArrowNames.West,Arr
     radio.setGroup(1);
 radio.onReceivedString(function (rs: string) {
     let n = parseInt(rs.slice(1));
-        if(rs[0] =='d'){//目的地番号の場合
+        if(rs[0] =='i'){//目的地番号の場合
             for(let i = 0;i < 8;i++){
             if(map[n] == list[i]){//正しい矢印がlistのどこに載ってるかを探す
                 radio.sendString("i"+i.toString());//iを文字列に変換しidをつけて送信
