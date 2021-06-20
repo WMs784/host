@@ -16,7 +16,7 @@ radio.onReceivedString(function (rs: string) {
             let cd = (n+45*index)%360;//目的地の方向を計算
             let cd1 = cd.toString();//文字列に変換
             radio.sendString("d"+cd1);//idをつけて送信
+            basic.showNumber(cd);
         }
-        
     }
 })
